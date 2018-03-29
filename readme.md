@@ -1,20 +1,24 @@
-# VR情報をあつめてTwitterにポストするbot
+# XR情報収集スクリプト
 
-スクレイピングして
-Redisにためて
-順にツイート
+VR情報をあつめてTwitterにポストするbot (のデータを集める部分)
 
+1. スクレイピングして
+2. Redisにためる
+
+```
 // 重複登録しないようにチェックするためのset
 type: set
 key: xr-set
 value: hash
+```
 
+```
 // ツイートするデータのリスト
 // RPUSH して LPOP する
 type: list
 key: xr-list
 value: json { url, title, hash }
-
+```
 
 ------
 

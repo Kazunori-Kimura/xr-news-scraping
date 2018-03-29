@@ -1,19 +1,31 @@
 {
   "name": "vr-news",
   "version": "1.0.0",
-  "description": "",
+  "description": "スクレイピングして Redisにためて 順にツイート",
   "main": "index.js",
   "scripts": {
     "test": "jest"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "keywords": ["VR", "Scraping"],
+  "author": "kazunori.kimura.js@gmail.com",
+  "license": "MIT",
   "dependencies": {
     "cheerio-httpcli": "^0.7.2",
     "redis": "^2.8.0"
   },
   "devDependencies": {
     "jest": "^22.4.3"
-  }
+  },
+  "directories": {
+    "lib": "lib",
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Kazunori-Kimura/xr-news-scraping.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Kazunori-Kimura/xr-news-scraping/issues"
+  },
+  "homepage": "https://github.com/Kazunori-Kimura/xr-news-scraping#readme"
 }
