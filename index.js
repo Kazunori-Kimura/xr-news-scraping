@@ -10,9 +10,9 @@ Promise.all([
   MoguraVR.exec(),
   Hatebu.exec(),
   Impress.exec(),
-  QiitaVR.exec(),
-  QiitaAR.exec(),
-  QiitaMR.exec()
+  // QiitaVR.exec(),
+  // QiitaAR.exec(),
+  // QiitaMR.exec()
 ]).then((values) => {
   let count = 0;
   values.forEach((value) => {
