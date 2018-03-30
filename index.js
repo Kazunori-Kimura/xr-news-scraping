@@ -2,11 +2,17 @@
 const MoguraVR = require("./lib/moguravr");
 const Hatebu = require("./lib/hatebu");
 const Impress = require("./lib/impress");
+const QiitaVR = require("./lib/qiitavr");
+const QiitaAR = require("./lib/qiitaar");
+const QiitaMR = require("./lib/qiitamr");
 
 Promise.all([
   MoguraVR.exec(),
   Hatebu.exec(),
-  Impress.exec()
+  Impress.exec(),
+  QiitaVR.exec(),
+  QiitaAR.exec(),
+  QiitaMR.exec()
 ]).then((values) => {
   let count = 0;
   values.forEach((value) => {
