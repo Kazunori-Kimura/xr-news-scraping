@@ -6,6 +6,8 @@ const QiitaVR = require("./lib/qiitavr");
 const QiitaAR = require("./lib/qiitaar");
 const QiitaMR = require("./lib/qiitamr");
 
+const startTime = Date.now();
+
 Promise.all([
   MoguraVR.exec(),
   Hatebu.exec(),
@@ -18,7 +20,8 @@ Promise.all([
   values.forEach((value) => {
     count += value;
   });
-  console.log(`登録件数: ${count}`);
+  const endTime = Date.now();
+  console.log(`登録件数: ${count}, 経過時間: ${endTime - startTime}ms`);
 
   // なぜかプログラムが終了しないので、強制終了させる
   process.exit(0);
