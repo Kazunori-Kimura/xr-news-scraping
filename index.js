@@ -5,6 +5,7 @@ const Impress = require("./lib/impress");
 const QiitaVR = require("./lib/qiitavr");
 const QiitaAR = require("./lib/qiitaar");
 const QiitaMR = require("./lib/qiitamr");
+const Panora = require("./lib/panora");
 
 const startTime = Date.now();
 
@@ -14,7 +15,8 @@ Promise.all([
   Impress.exec(),
   QiitaVR.exec(),
   QiitaAR.exec(),
-  QiitaMR.exec()
+  QiitaMR.exec(),
+  Panora.exec()
 ]).then((values) => {
   let count = 0;
   values.forEach((value) => {
@@ -27,4 +29,5 @@ Promise.all([
   process.exit(0);
 }).catch((err) => {
   console.log(err);
+  process.exit(1);
 })
